@@ -1,0 +1,75 @@
+// CSS Reset - Bootsrtrap (Eric Mayer)
+@import "reset.scss";
+
+$dark: rgb(51,51,51);
+$white: rgb(255,255,255);
+$darkWhite: rgb(245,245,245);
+$lightGray: rgb(240,240,240);
+$gray: rgb(196,196,196);
+$dropdownHeight: 50px;
+$cellHeight: $dropdownHeight - 8;
+$CellPaddingLeft: 18px;
+
+body{
+  background-color: $white;
+}
+
+@mixin arrow-down ($size, $color){
+  width: 0;
+  height: 0;
+  border-left: $size solid transparent;
+  border-right: $size solid transparent;
+  border-top: $size solid $color;
+}
+
+
+.dropdown{
+  width: 420px;
+  color: $dark;
+
+  .dropdown-title{
+    height: $dropdownHeight;
+    line-height: $dropdownHeight;
+    border: 1px solid $gray;
+    padding-left: $CellPaddingLeft;
+    cursor: pointer;
+    &.dropdown-is-selected{
+      background-color: $darkWhite;
+    }
+  }
+
+  .dropdown-carret{
+    $carretSize: 6px;
+    $caretColor: rgb(153,153,153);
+    @include arrow-down($carretSize, $caretColor);
+    position: relative;
+    right: 15px;
+    top: - ($dropdownHeight / 2 + $carretSize / 2);
+    float: right;
+  }
+
+  .dropdown--list{
+    display: none;
+  }
+  &.dropdown-is-opened .dropdown--list{
+    margin-top: 5px;
+    border: 1px solid $gray;
+    display: block;
+  }
+
+  .dropdown--item{
+    height: $cellHeight;
+    line-height: $cellHeight;
+    padding-left: $CellPaddingLeft;
+    border-bottom: 1px solid $lightGray;
+    cursor: pointer;
+    &:hover{
+      background-color: $darkWhite;
+    }
+    &.dropdown--item-is-selected{
+      background-color: $darkWhite;
+    }
+  }
+
+
+}
