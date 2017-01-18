@@ -17,4 +17,4 @@
 
 ```$ gulp dev``` - build with developer tools the example and run the server on http://localhost:8080
 
-        open http://localhost:8080
+        $ open http://localhost:8080
