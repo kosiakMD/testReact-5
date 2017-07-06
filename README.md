@@ -1,7 +1,7 @@
 
-#Test Task#
+# Test Task
 
-##Install
+## Install
 
         $ git clone https://github.com/kosiakMD/testReact-5
         
@@ -9,7 +9,7 @@
 
         $ npm install
 
-##Run
+## Run
 
 ```$ gulp``` - by default build the example and run the server on http://localhost:8080
 
